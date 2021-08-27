@@ -36,7 +36,7 @@ const BookingItem = ({officeName, ...otherProps}) => {
         <span>Price: {officeInfo.price} SEK</span>
         <span>Location: {officeInfo.location}</span> 
         <span>Description: {officeInfo.description}</span> 
-        <div style={{display: 'flex', flexDirection: 'column', marginTop: '15px', marginBottom: '15px'}}>
+        <div style={{display: 'flex', flexDirection: 'column', marginTop: '16px', marginBottom: '16px'}}>
         <span>From: {formatDate(fromDate)}</span>
         <span>To: {formatDate(toDate)}</span>
         </div>
