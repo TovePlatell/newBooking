@@ -3,6 +3,7 @@ import * as S from "./styles";
 import Modal from "react-modal";
 import NewBooking from "../new-booking/NewBooking";
 
+
 const customStyles = {
   content: {
     top: "50%",
@@ -39,6 +40,7 @@ const OfficeItem = ({
           onRequestClose={handleModal}
           isOpen={modalIsOpen}>
           <NewBooking price={price} name={name} location={location} />
+          
         </Modal>
       </S.ProductInfoContainer>
     </S.OfficeItemContainer>

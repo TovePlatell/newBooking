@@ -18,16 +18,17 @@ const Header = () => {
                     Contact
                 </Link>
                 <Link to='/account' style={{textDecoration: 'none', color: 'black'}}>
-                    Account
-                </Link>
-                <Link to='/booking' style={{textDecoration: 'none', color: 'black'}}>
-                    Bookings
+                Account
                 </Link>
                 {isLoggedIn && (
+                    <>
+                <Link to='/bookings' style={{textDecoration: 'none', color: 'black'}}>
+                    Bookings
+                </Link>
                 <Link onClick={() => localStorage.removeItem('uid')} to='/' style={{textDecoration: 'none', color: 'black'}}>
                     Log out
                 </Link>
-
+</>
                 )}
             </div>
         </div>

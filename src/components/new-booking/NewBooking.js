@@ -21,12 +21,12 @@ const NewBooking = ({name, price, location}) => {
 
   const handleSubmit =() => {
     addBooking(name, userInfo.email, startDate, endDate)
-    alert("New user created");
+    alert("Office booked");
   };
 
   return (
     <S.SignUpContainer>
-      <h2 style={{ textAlign: "center" }}>Sign up</h2>
+      <h2 style={{ textAlign: "center" }}>Book now</h2>
       <h3 style={{textAlign: "center"}}>{`${name} - ${location} - ${price} SEK`}</h3>
       <S.FormContainer>
         <S.LabelContainer>Email:</S.LabelContainer>

@@ -59,36 +59,43 @@ export const getProducts = async () => {
   snapshot.forEach((doc) => {
     productsArray.push(doc.data());
   });
-
+  
   return productsArray;
 };
 
-export const addBooking = async (officeName, email, startDate, endDate) => {
-  const officeRef = firestore
-    .collection("offices")
-    .where("name", "==", officeName);
-  const snapshot = await officeRef.get();
-  const officeId = snapshot.docs[0].id;
+export const getUserBookings = async (email) => {
+  const bookingsArray = [];
+  const bookingsRef = firestore.collection('booking').where('email', '==',  email)
+  const snapshot = await bookingsRef.get()
+  
+  snapshot.forEach((doc) => {
+    bookingsArray.push(doc.data());
+  });
 
+  return bookingsArray
+}
+
+export const getBookedInfo = async (officeName) => {
+  const officeRef = firestore.collection(`offices`).where('name', '==', officeName)
+  const snapshot = await officeRef.get()
+  const officeInfo = snapshot.docs[0].data()
+  return officeInfo
+} 
+
+export const addBooking = async (officeName, email, startDate, endDate) => {
   const bookingRef = firestore.collection("booking").doc();
+
   try {
     bookingRef.set({
       email,
       startDate,
       endDate,
-      bookedOffice: officeId,
+      officeName,
     });
   } catch (err) {
     console.log(err);
   }
-
-  return snapshot;
 };
-
-// export const getBookings = async () => {
-//   const bookingsRef = firestore.collection('booking')
-
-// }
 
 firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();

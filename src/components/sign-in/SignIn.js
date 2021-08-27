@@ -22,6 +22,7 @@ const SignIn = () => {
         const {user} = await auth.signInWithEmailAndPassword(email, password)
 
         localStorage.setItem('uid', user.uid)
+        localStorage.setItem('userEmail', user.email)
         
     }
 
