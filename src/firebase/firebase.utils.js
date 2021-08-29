@@ -18,12 +18,12 @@ const firebaseConfig = {
 export const newAccount = async (userAuth, info) => {
   if (!userAuth) return;
 
-  const test = firestore.doc(`users/${userAuth.uid}`);
-  const test2 = await test.get();
+  const user = firestore.doc(`users/${userAuth.uid}`);
+  const fetchUser = await user.get();
 
-  if (!test2.exist) {
+  if (!fetchUser.exist) {
     try {
-      await test.set({
+      await user.set({
         displayName: info.name,
         email: info.email,
         isAdmin: false,

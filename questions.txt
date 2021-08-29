@@ -1,0 +1,12 @@
+Vad är en CMS, headless cms, Firebase/serverless/backend as a service?
+
+- Ett klassiskt CMS lagras innehållet på hemsidan i ett backoffice där skapas hemsidans struktur, backend och frontend är bundet till varandra tillskillnad från
+- Headless Content Management system som är en plattform som är oberoende av frontend och innehållet kan hämtas med såkallad API. 
+- Baas är 3-part service som låter dig att utveckla en applikation utan att behöva lägga så mycket tid på backend. 
+
+Skillnaden mellan cms och backend as a service?
+-    Skillnaden är att med cms behöver du skapa din egna backend och hantera allt från början och hantera all infrastruktur, medans med Baas så levereras backend i färdig "blockmoduler". Fördelen med CMS är flexibiliten men mer kostsamt och dubbel så lång utvecklingstid.
+
+Vilket sammanhang ska man använda headless cms och vanlig cms? 
+- För bloggar och mmindre hemsidor är vanlig CMS att föredra där du har allt på samma ställe, det är lätt att hantera och du kan publicera innehållet smidigt och enkelt.
+Headless CMS är mer flexibelt då man man publicera innehåll på olika plattformar samt att man som utvecklar har mer spelrum till att kunna använda sina egna verktyg och ramverk. Headless CMS ligger även bra i tiden och utvecklas och samspelar nya innovationer och dagens teknologi.   
